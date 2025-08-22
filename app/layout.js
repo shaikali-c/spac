@@ -7,7 +7,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "Discover Space",
-  description: "By ShaikAli",
+  description: "By ShaikALi",
 };
 
 export default function RootLayout({ children }) {

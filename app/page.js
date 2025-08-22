@@ -1,4 +1,4 @@
-import HomeTitle from "@/components/home/title";
+import HomeTitle from "@/components/ui/home/title";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
