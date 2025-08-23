@@ -2,9 +2,9 @@ import Sidebar from "@/components/ui/sidebar/sidebar";
 
 export default function DiscoverLayout({ children }) {
   return (
-    <section className="bg-black">
+    <section className="bg-black flex min-h-screen">
       <Sidebar />
-      {children}
+      <section className="ml-16 flex flex-col flex-1">{children}</section>
     </section>
   );
 }
