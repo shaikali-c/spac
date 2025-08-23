@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Main() {
   return (
-    <section className="w-screen h-dvh flex items-center justify-center flex-col relative bg-neutral-950 text-neutral-50">
+    <section className="w-screen h-dvh flex items-center justify-center flex-col relative bg-black text-neutral-50">
       <HomeTitle text={"Astronomy"} />
       <HomeTitle text={"Space"} />
       <p className="text-neutral-400 my-4 md:w-100 w-fit px-10 text-center hidden md:block">
