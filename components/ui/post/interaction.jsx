@@ -1,5 +1,5 @@
 "use client";
-export default function PostInteraction({ children }) {
+export default function PostInteraction({ children, amount }) {
   const handleClick = () => {
     console.log("Alright.");
   };
@@ -9,7 +9,7 @@ export default function PostInteraction({ children }) {
       onClick={handleClick}
     >
       {children}
-      <p>203</p>
+      <p>{amount}</p>
     </div>
   );
 }
