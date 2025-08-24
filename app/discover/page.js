@@ -30,7 +30,7 @@ export default function Discover() {
             ))}
             <Link
               aria-label="About thoughts page"
-              href={"/discover/tag"}
+              href={"/create"}
               className="text-center text-neutral-50 flex gap-1 justify-center items-center bg-sky-600 w-fit mx-auto p-3 px-5 rounded-full hover:underline mb-10"
             >
               Post a thought
