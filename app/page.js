@@ -12,7 +12,7 @@ export default function Main() {
         discoveries.
       </p>
       <Link
-        className="p-4 border-1 border-neutral-800 rounded-full mt-4 hover:bg-neutral-800 flex items-center gap-2"
+        className="p-4 border-1 border-neutral-800 rounded-full mt-4 hover:bg-neutral-800 flex items-center gap-2 md:bg-transparent bg-neutral-800"
         href={"/discover"}
         aria-label="EXPLORE"
       >

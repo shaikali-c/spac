@@ -12,11 +12,11 @@ import Link from "next/link";
 
 export default function Post() {
   return (
-    <div className="p-5 w-fit max-w-150 border-b-1 border-neutral-900 md:border-x-1 flex flex-col">
+    <div className="p-5 w-fit max-w-150 border-b-2 border-neutral-900 md:border-x-2 flex flex-col">
       <header className="flex justify-between text-neutral-200">
         <div className="flex items-center gap-2">
           <CircleUserRound color="grey" size={20} />
-          <Link href={"/"} className="hover:underline">
+          <Link href={"/discover/tag"} className="hover:underline">
             Shaik Ali
           </Link>
         </div>
