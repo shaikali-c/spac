@@ -53,7 +53,7 @@ export default function CreateCol1({ postData, setPostData }) {
         {/* <p className="text-red-500">
           The title is too short, please make it more informative.
         </p> */}
-        <button className="bg-neutral-700 w-fit mx-auto p-4 rounded-full mt-3 hover:bg-sky-600 cursor-pointer transition-all">
+        <button className="bg-neutral-700 w-fit mx-auto p-4.5 rounded-full mt-3 hover:bg-sky-600 cursor-pointer transition-all">
           <ArrowUpRight size={22} />
         </button>
       </section>
