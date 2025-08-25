@@ -66,7 +66,7 @@ export default function Post({
             e.currentTarget.src = "/assets/placeholder_image.svg"; // from /public/fallback.png
           }}
           alt="Post Image"
-          className="rounded-2xl mt-5 object-cover"
+          className="rounded-2xl mt-5 object-cover max-h-80"
         />
       )}
       <div

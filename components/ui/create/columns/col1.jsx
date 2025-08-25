@@ -4,14 +4,14 @@ import CreateInput from "../createInput";
 export default function CreateCol1({ postData, setPostData }) {
   return (
     <section className="relative">
-      <header className="p-10 pb-5 flex flex-col gap-1.5">
+      <header className="p-8 md:p-10 pb-5 md:pb-5 flex flex-col gap-1.5">
         <h2 className="text-xl">What's on your mind?</h2>
         <p className="text-neutral-400">
           Make it as clear as possible because it's the first thing people will
           see, even before the image.
         </p>
       </header>
-      <section className="p-10 pt-0 flex flex-col gap-5">
+      <section className="p-8 md:p-10 md:pt-0 pt-3 flex flex-col gap-5">
         <CreateInput
           placeholder={"Pick your post title"}
           setPostData={setPostData}
@@ -51,8 +51,8 @@ export default function CreateCol1({ postData, setPostData }) {
           <ArrowUpRight size={22} />
         </button>
       </section>
-      <footer className="absolute bottom-0 right-0 p-10 text-sm text-neutral-400">
-        <p>-/ By ShaikALi</p>
+      <footer className="fixed bottom-0 right-0 p-10 text-sm text-neutral-400">
+        <p>-/ By Marwaan</p>
       </footer>
     </section>
   );

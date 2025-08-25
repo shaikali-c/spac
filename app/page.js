@@ -26,7 +26,7 @@ export default function Main() {
             className="hover:underline hover:text-neutral-200 transition-all"
           >
             {" "}
-            By ShaikALi
+            By Marwaan
           </a>
         </p>
       </footer>
