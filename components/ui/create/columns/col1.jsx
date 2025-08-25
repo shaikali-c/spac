@@ -1,4 +1,11 @@
-import { ArrowUpRight, Link, Pencil, Play, WrapText } from "lucide-react";
+import {
+  ArrowUpRight,
+  CircleAlert,
+  Link,
+  Pencil,
+  Play,
+  WrapText,
+} from "lucide-react";
 import CreateInput from "../createInput";
 
 export default function CreateCol1({ postData, setPostData }) {
@@ -13,10 +20,10 @@ export default function CreateCol1({ postData, setPostData }) {
       </header>
       <section className="p-8 md:p-10 md:pt-0 pt-3 flex flex-col gap-5">
         <CreateInput
-          placeholder={"Pick your post title"}
+          placeholder={"Pick your post category"}
           setPostData={setPostData}
-          inputValue={postData.userName}
-          keyValue={"userName"}
+          inputValue={postData.category}
+          keyValue={"category"}
           postData={postData}
         >
           <Pencil size={18} />
@@ -43,10 +50,9 @@ export default function CreateCol1({ postData, setPostData }) {
           Your post won’t be shared right away. It’ll first go into pending
           posts and get checked before showing up.
         </p>
-        {/* <p className="text-red-500 flex items-center gap-2">
-              <CircleAlert size={15} />
-              The title is too short, please make it more informative.
-            </p> */}
+        {/* <p className="text-red-500">
+          The title is too short, please make it more informative.
+        </p> */}
         <button className="bg-neutral-700 w-fit mx-auto p-4 rounded-full mt-3 hover:bg-sky-600 cursor-pointer transition-all">
           <ArrowUpRight size={22} />
         </button>

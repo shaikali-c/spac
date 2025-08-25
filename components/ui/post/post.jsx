@@ -16,6 +16,7 @@ export default function Post({
   comments = 124,
   data = {
     userName: "ShaikALi",
+    category: "Black hole",
     content:
       "The Atmospheric Limb Tracker for Investigation of the Upcoming Stratosphere (Altius) mission.",
     imageLink: "",
@@ -30,12 +31,13 @@ export default function Post({
       <header className="flex justify-between text-neutral-200">
         <div className="flex items-center gap-2">
           <CircleUserRound color="grey" size={20} />
-          {data.userName && (
+          {!previewMode ? (
             <Link href={"/discover/tag"} className="hover:underline">
               {data.userName}
             </Link>
+          ) : (
+            <p>Random Guy</p>
           )}
-          {!data.userName && <p>Author Name</p>}
         </div>
         <Ellipsis size={20} />
       </header>
@@ -56,18 +58,21 @@ export default function Post({
           src={SpaceImage}
           alt="An Image"
           className="rounded-2xl mt-5 object-cover"
+          placeholder="blur"
         />
       ) : (
-        <img
-          src={
-            !data.imageLink ? "/assets/placeholder_image.svg" : data.imageLink
-          }
-          onError={(e) => {
-            e.currentTarget.src = "/assets/placeholder_image.svg"; // from /public/fallback.png
-          }}
-          alt="Post Image"
-          className="rounded-2xl mt-5 object-cover max-h-80"
-        />
+        <div>
+          <img
+            src={
+              !data.imageLink ? "/assets/placeholder_image.svg" : data.imageLink
+            }
+            onError={(e) => {
+              e.currentTarget.src = "/assets/placeholder_image.svg"; // from /public/fallback.png
+            }}
+            alt="Post Image"
+            className="rounded-2xl mt-5 object-cover max-h-80"
+          />
+        </div>
       )}
       <div
         className={`flex ${
@@ -86,7 +91,7 @@ export default function Post({
         {!previewMode && (
           <p className="text-neutral-400 flex items-center gap-1.5">
             <Star fill="#006fff" color="#006fff" size={10} />
-            Black hole
+            {data.category}
           </p>
         )}
       </div>
