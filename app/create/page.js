@@ -5,7 +5,6 @@ import { useState } from "react";
 
 export default function Create() {
   const [postData, setPostData] = useState({});
-  console.log(postData);
   return (
     <section className="w-screen h-dvh md:h-screen md:justify-center flex items-center md:p-0">
       <div className="h-170 md:max-w-250 md:bg-neutral-900 md:rounded-2xl grid md:grid-cols-[minmax(0,2fr)_1fr] grid-cols-1 overflow-hidden">

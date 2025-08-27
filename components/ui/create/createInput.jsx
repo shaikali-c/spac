@@ -3,38 +3,7 @@
 import { ArrowUpRight, Ban } from "lucide-react";
 import { useState } from "react";
 
-const _spaceKeywords = [
-  "black_hole",
-  "supernova",
-  "neutron_star",
-  "white_dwarf",
-  "red_giant",
-  "planetary_nebula",
-  "asteroid_belt",
-  "cosmic_ray",
-  "dark_matter",
-  "dark_energy",
-  "exoplanet",
-  "galaxy_cluster",
-  "event_horizon",
-  "interstellar_medium",
-  "light_year",
-  "meteor_shower",
-  "orbital_period",
-  "protoplanetary_disk",
-  "pulsar",
-  "quasar",
-  "solar_flare",
-  "space_station",
-  "star_cluster",
-  "supercluster",
-  "telescope",
-  "universe",
-  "wormhole",
-  "comet_tail",
-  "gamma_ray_burst",
-  "nebula",
-];
+import { _spaceKeywords } from "@/constants/spaceKeywords";
 
 export default function CreateInput({
   placeholder,
@@ -88,7 +57,7 @@ export default function CreateInput({
       />
       {categoryFocus && (
         <div
-          className={`absolute top-full h-50 w-full z-10 bg-neutral-800 flex flex-col overflow-y-auto rounded-b-xl ${
+          className={`absolute top-full h-50 w-full z-10 bg-neutral-800 flex flex-col overflow-y-auto ${
             categoryFocus ? "border-t-2 border-sky-600" : ""
           } border-neutral-700`}
         >
@@ -104,7 +73,7 @@ export default function CreateInput({
           ))}
           {spaceKeywords.length === 0 && (
             <span className="border-b-2 bg-neutral-800 transition-all border-neutral-600 px-7 p-5 flex items-center gap-2.5">
-              Keyword not found
+              Category not found
               <Ban size={18} />
             </span>
           )}

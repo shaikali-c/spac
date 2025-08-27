@@ -9,7 +9,7 @@ export default function PostInteraction({ children, amount }) {
       onClick={handleClick}
     >
       {children}
-      <p>{amount}</p>
+      <p className="text-neutral-300">{amount}</p>
     </div>
   );
 }

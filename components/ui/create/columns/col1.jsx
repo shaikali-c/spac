@@ -1,12 +1,12 @@
 import {
   ArrowUpRight,
-  CircleAlert,
-  Link,
+  ChevronLeft,
+  LinkIcon,
   Pencil,
-  Play,
   WrapText,
 } from "lucide-react";
 import CreateInput from "../createInput";
+import Link from "next/link";
 
 export default function CreateCol1({ postData, setPostData }) {
   return (
@@ -29,7 +29,7 @@ export default function CreateCol1({ postData, setPostData }) {
           <Pencil size={18} />
         </CreateInput>
         <CreateInput
-          placeholder={"Explain about your post"}
+          placeholder={"Tell us more about it"}
           setPostData={setPostData}
           inputValue={postData.content}
           keyValue={"content"}
@@ -44,7 +44,7 @@ export default function CreateCol1({ postData, setPostData }) {
           keyValue={"imageLink"}
           postData={postData}
         >
-          <Link size={18} />
+          <LinkIcon size={18} />
         </CreateInput>
         <p className="text-sm text-neutral-400">
           Your post won’t be shared right away. It’ll first go into pending
@@ -53,10 +53,18 @@ export default function CreateCol1({ postData, setPostData }) {
         {/* <p className="text-red-500">
           The title is too short, please make it more informative.
         </p> */}
-        <button className="bg-neutral-700 w-fit mx-auto p-4.5 rounded-full mt-3 hover:bg-sky-600 cursor-pointer transition-all">
+        <button
+          className={`bg-neutral-700 w-fit mx-auto p-4.5 rounded-full mt-3 hover:bg-sky-600 cursor-pointer transition-all`}
+        >
           <ArrowUpRight size={22} />
         </button>
       </section>
+      <Link
+        href={"/discover"}
+        className="absolute bottom-8 left-8 hover:underline flex items-center gap-1"
+      >
+        <ChevronLeft size={16} /> Back
+      </Link>
       <footer className="fixed bottom-0 right-0 p-10 text-sm text-neutral-400">
         <p>-/ By Marwaan</p>
       </footer>
