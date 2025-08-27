@@ -1,9 +1,16 @@
-import { CircleUserRound, Dot, Ellipsis, MessageCircle } from "lucide-react";
+import {
+  Bookmark,
+  CircleUserRound,
+  Dot,
+  Ellipsis,
+  MessageCircle,
+} from "lucide-react";
 import Image from "next/image";
 import PostInteraction from "./interaction";
 import SpaceImage from "@/public/assets/img.jpg";
 import Link from "next/link";
 import ILike from "./iLike";
+import IComment from "./iComment";
 
 export default function Post({
   previewMode = false,
@@ -75,16 +82,18 @@ export default function Post({
         </div>
       )}
 
-      <div className={`flex items-center w-full pt-5`}>
+      <div
+        className={`flex items-center w-full pt-5 justify-between text-neutral-300`}
+      >
         {/* Custom condition that likes will show only if there's a image link provided, makes sense right? I guess. */}
-        <div className="flex items-center pb-0 gap-5 text-neutral-300">
+        <div className="flex items-center pb-0 gap-5 ">
           <ILike amount={likes} />
-          <PostInteraction amount={comments}>
-            <MessageCircle size={20} />
-          </PostInteraction>
+          <IComment amount={comments} />
         </div>
+        <Bookmark size={20} />
       </div>
       <p className="pt-3 text-neutral-400">
+        <span className="font-bold text-neutral-200 mr-2">{data.userName}</span>
         {data.content ? data.content : "Once upon a time..."}
       </p>
     </div>

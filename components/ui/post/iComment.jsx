@@ -1,9 +1,9 @@
-import { Heart } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
-export default function ILike({ amount }) {
+export default function IComment({ amount }) {
   return (
     <div className="flex gap-1.5 items-center hover:text-rose-600 cursor-pointer select-none">
-      <Heart size={20} />
+      <MessageCircle size={20} />
       <p>{amount}</p>
     </div>
   );
