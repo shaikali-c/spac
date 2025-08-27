@@ -1,5 +1,6 @@
 import {
   Aperture,
+  House,
   Image,
   MoonStar,
   Settings,
@@ -16,12 +17,12 @@ export default function Sidebar() {
           <Star size={20} fill="#fff" />
         </div>
         <SidebarElem>
-          <MoonStar size={20} />
+          <House size={20} />
         </SidebarElem>
         <SidebarElem>
           <Aperture size={20} />
         </SidebarElem>
-        <SidebarElem>
+        <SidebarElem path="/create">
           <WandSparkles size={20} />
         </SidebarElem>
         <SidebarElem>

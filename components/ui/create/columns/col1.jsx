@@ -61,7 +61,7 @@ export default function CreateCol1({ postData, setPostData }) {
       </section>
       <Link
         href={"/discover"}
-        className="absolute bottom-8 left-8 hover:underline flex items-center gap-1"
+        className="absolute bottom-8 left-8 hover:underline hidden md:flex items-center gap-1"
       >
         <ChevronLeft size={16} /> Back
       </Link>

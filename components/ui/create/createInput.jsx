@@ -1,7 +1,7 @@
 "use client";
 
-import { ArrowUpRight, Ban } from "lucide-react";
-import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
+import { useRef, useState } from "react";
 
 import { _spaceKeywords } from "@/constants/spaceKeywords";
 
@@ -13,6 +13,7 @@ export default function CreateInput({
   keyValue,
 }) {
   const [focus, setFocus] = useState(false);
+  const inputValue = useRef(null);
   const [spaceKeywords, setSpaceKeywords] = useState(_spaceKeywords);
   const [categoryFocus, setCategoryFocus] = useState(false);
   const handleValueChange = (e) => {
@@ -43,6 +44,7 @@ export default function CreateInput({
     >
       {children}
       <input
+        ref={inputValue}
         type="text"
         placeholder={placeholder}
         className="w-full p-5 pl-3 outline-0  focus:border-sky-600 "
@@ -63,7 +65,7 @@ export default function CreateInput({
         >
           {spaceKeywords.map((elem, index) => (
             <span
-              className="border-b-2 bg-neutral-800 transition-all border-neutral-600 px-7 p-5 flex items-center gap-2.5 hover:bg-neutral-600 cursor-pointer"
+              className="border-b-2 bg-neutral-800 transition-all border-neutral-600 px-7 p-5 flex items-center gap-2.5"
               key={index}
               onMouseDown={() => handleCategorySelect(elem)}
             >
@@ -72,9 +74,9 @@ export default function CreateInput({
             </span>
           ))}
           {spaceKeywords.length === 0 && (
-            <span className="border-b-2 bg-neutral-800 transition-all border-neutral-600 px-7 p-5 flex items-center gap-2.5">
-              Category not found
-              <Ban size={18} />
+            <span className="border-b-2 bg-neutral-800 transition-all border-neutral-600 px-7 p-5 flex items-center gap-2.5 hover:bg-neutral-600 cursor-pointer">
+              {postData[keyValue]}
+              <ArrowUpRight size={18} />
             </span>
           )}
         </div>

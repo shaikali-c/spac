@@ -6,5 +6,11 @@ export default function PreviewPost({ postData }) {
   useEffect(() => {
     setPreviewLikes(Math.floor(Math.random() * 200000));
   }, []);
-  return <Post previewMode="true" likes={previewLikes} data={postData} />;
+  return (
+    <Post
+      previewMode="true"
+      likes={previewLikes}
+      data={{ ...postData, time: "2h" }}
+    />
+  );
 }

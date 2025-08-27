@@ -1,15 +1,9 @@
-import {
-  CircleUserRound,
-  Dot,
-  Ellipsis,
-  Heart,
-  MessageCircle,
-  Star,
-} from "lucide-react";
+import { CircleUserRound, Dot, Ellipsis, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import PostInteraction from "./interaction";
 import SpaceImage from "@/public/assets/img.jpg";
 import Link from "next/link";
+import ILike from "./iLike";
 
 export default function Post({
   previewMode = false,
@@ -17,7 +11,7 @@ export default function Post({
   comments = 124,
   data = {
     userName: "ShaikALi",
-    category: "Black hole",
+    time: "2h",
     content:
       "The Atmospheric Limb Tracker for Investigation of the Upcoming Stratosphere (Altius) mission.",
     imageLink: "",
@@ -32,14 +26,13 @@ export default function Post({
       <header className="flex justify-between text-neutral-200">
         <div className="flex items-center gap-2">
           <CircleUserRound color="grey" size={20} />
-          <Link
-            href={"/discover/tag"}
-            className="hover:underline flex items-center w-full"
-          >
-            {data.userName ? data.userName : "Astronout"}
+          <Link href={"/discover/tag"} className="flex items-center w-full">
+            <span className="hover:underline ">
+              {data.userName ? data.userName : "Astronout"}
+            </span>
             <span className="flex text-neutral-400">
               <Dot />
-              2h
+              {data.time}
             </span>
           </Link>
         </div>
@@ -56,12 +49,17 @@ export default function Post({
       )} */}
 
       {!previewMode ? (
-        <Image
-          src={SpaceImage}
-          alt="An Image"
-          className="rounded-2xl mt-5 object-cover"
-          placeholder="blur"
-        />
+        <div className="relative w-full h-100 mb-5">
+          <Image
+            src={
+              "https://cdn.esahubble.org/archives/images/screen/heic0702a.jpg"
+            }
+            alt="An Image"
+            className="rounded-2xl mt-5 object-cover"
+            // placeholder="blur"
+            fill
+          />
+        </div>
       ) : (
         <div>
           <img
@@ -80,9 +78,7 @@ export default function Post({
       <div className={`flex items-center w-full pt-5`}>
         {/* Custom condition that likes will show only if there's a image link provided, makes sense right? I guess. */}
         <div className="flex items-center pb-0 gap-5 text-neutral-300">
-          <PostInteraction amount={likes}>
-            <Heart size={20} />
-          </PostInteraction>
+          <ILike amount={likes} />
           <PostInteraction amount={comments}>
             <MessageCircle size={20} />
           </PostInteraction>
