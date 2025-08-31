@@ -55,7 +55,7 @@ export default function CreateInput({
           e.key === " " && keyValue === "category" ? e.preventDefault() : ""
         }
         onChange={handleValueChange}
-        maxLength={keyValue === "imageLink" ? 500 : 50}
+        maxLength={keyValue === "imageLink" ? 500 : 80}
       />
       {categoryFocus && (
         <div
@@ -65,7 +65,7 @@ export default function CreateInput({
         >
           {spaceKeywords.map((elem, index) => (
             <span
-              className="border-b-2 bg-neutral-800 transition-all border-neutral-600 px-7 p-5 flex items-center gap-2.5"
+              className="border-b-2 bg-neutral-800 transition-all border-neutral-600 px-7 p-5 flex items-center gap-2.5 hover:bg-neutral-600 cursor-pointer"
               key={index}
               onMouseDown={() => handleCategorySelect(elem)}
             >

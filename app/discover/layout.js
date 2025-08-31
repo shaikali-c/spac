@@ -5,7 +5,7 @@ export default function DiscoverLayout({ children }) {
   return (
     <section className="bg-black flex min-h-screen">
       <Sidebar />
-      <section className="ml-16 flex flex-1 flex-col">
+      <section className="md:ml-16 flex flex-1 flex-col">
         <Searchbar />
         {children}
       </section>

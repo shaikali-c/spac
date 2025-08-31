@@ -22,7 +22,6 @@ export default function CreateCol1({ postData, setPostData }) {
         <CreateInput
           placeholder={"Pick your post category"}
           setPostData={setPostData}
-          inputValue={postData.category}
           keyValue={"category"}
           postData={postData}
         >
@@ -31,8 +30,7 @@ export default function CreateCol1({ postData, setPostData }) {
         <CreateInput
           placeholder={"Tell us more about it"}
           setPostData={setPostData}
-          inputValue={postData.content}
-          keyValue={"content"}
+          keyValue={"caption"}
           postData={postData}
         >
           <WrapText size={18} />
@@ -40,7 +38,6 @@ export default function CreateCol1({ postData, setPostData }) {
         <CreateInput
           placeholder={"Drop the image link"}
           setPostData={setPostData}
-          inputValue={postData.imageLink}
           keyValue={"imageLink"}
           postData={postData}
         >

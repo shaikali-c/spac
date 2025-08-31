@@ -1,3 +1,16 @@
 {
-  "editor.fontFamily": "DM Mono"
+  "workbench.colorTheme": "Vercel (Dark)",
+  "editor.fontFamily": "DM Mono",
+  "window.menuBarVisibility": "toggle",
+  "window.commandCenter": false,
+  "chat.commandCenter.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.statusBar.visible": false,
+  "workbench.startupEditor": "none",
+  "editor.cursorBlinking": "smooth",
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.cursorWidth": 2,
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

@@ -1,8 +1,11 @@
-export default function PostInteraction({ children, amount }) {
+import IComment from "./iComment";
+import ILike from "./iLike";
+
+export default function PostInteraction({ likes, comments }) {
   return (
-    <div className="flex gap-1.5 items-center hover:text-rose-600 cursor-pointer select-none">
-      {children}
-      <p className="text-neutral-300">{amount}</p>
+    <div className="flex items-center pb-0 gap-5 ">
+      <ILike amount={likes} />
+      <IComment amount={comments} />
     </div>
   );
 }

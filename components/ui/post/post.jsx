@@ -1,16 +1,10 @@
-import {
-  Bookmark,
-  CircleUserRound,
-  Dot,
-  Ellipsis,
-  MessageCircle,
-} from "lucide-react";
+"use client";
+import { CircleUserRound, Dot, Ellipsis } from "lucide-react";
 import Image from "next/image";
-import PostInteraction from "./interaction";
-import SpaceImage from "@/public/assets/img.jpg";
 import Link from "next/link";
-import ILike from "./iLike";
-import IComment from "./iComment";
+import PostSave from "./save";
+import PostInteraction from "./interaction";
+import PostCaption from "./caption";
 
 export default function Post({
   previewMode = false,
@@ -19,22 +13,22 @@ export default function Post({
   data = {
     userName: "ShaikALi",
     time: "2h",
-    content:
+    caption:
       "The Atmospheric Limb Tracker for Investigation of the Upcoming Stratosphere (Altius) mission.",
     imageLink: "",
   },
 }) {
   return (
     <div
-      className={`p-5 w-full max-w-140 border-neutral-900 flex flex-col ${
-        !previewMode ? "md:border-x-2 border-b-2 " : ""
+      className={`p-5 w-full max-w-120 border-neutral-900 flex flex-col ${
+        !previewMode ? "md:border-x-2 border-b-2 " : "border-x-0"
       }`}
     >
       <header className="flex justify-between text-neutral-200">
         <div className="flex items-center gap-2">
           <CircleUserRound color="grey" size={20} />
           <Link href={"/discover/tag"} className="flex items-center w-full">
-            <span className="hover:underline ">
+            <span className="hover:underline font-medium">
               {data.userName ? data.userName : "Astronout"}
             </span>
             <span className="flex text-neutral-400">
@@ -45,57 +39,51 @@ export default function Post({
         </div>
         <Ellipsis size={20} />
       </header>
-      {/* Focus on Image Render Condition */}
-
-      {/* {data.imageLink && (
-        <Image
-          src={SpaceImage}
-          alt="An Image"
-          className="rounded-2xl mt-5 object-cover"
-        />
-      )} */}
-
       {!previewMode ? (
         <div className="relative w-full h-100 mb-5">
           <Image
             src={
-              "https://cdn.esahubble.org/archives/images/screen/heic0702a.jpg"
+              data.imageLink
+                ? data.imageLink
+                : "https://cdn.esahubble.org/archives/images/screen/heic0702a.jpg"
             }
             alt="An Image"
             className="rounded-2xl mt-5 object-cover"
-            // placeholder="blur"
             fill
           />
         </div>
       ) : (
         <div>
-          <img
+          <div className="h-70 my-5 mb-0 rounded-2xl w-full bg-neutral-700 relative overflow-hidden">
+            <img
+              src={data.imageLink || "/assets/placeholder_image.svg"}
+              onError={(e) => {
+                e.currentTarget.src = "/assets/placeholder_image.svg";
+              }}
+              alt="Post Image"
+              className="rounded-2xl object-cover h-full w-full"
+            />
+          </div>
+          {/* <img
             src={
               !data.imageLink ? "/assets/placeholder_image.svg" : data.imageLink
             }
             onError={(e) => {
-              e.currentTarget.src = "/assets/placeholder_image.svg"; // from /public/fallback.png
+              e.currentTarget.src = "/assets/placeholder_image.svg";
             }}
             alt="Post Image"
             className="rounded-2xl mt-5 object-cover h-full w-full max-h-80"
-          />
+          /> */}
         </div>
       )}
-
-      <div
-        className={`flex items-center w-full pt-5 justify-between text-neutral-300`}
-      >
-        {/* Custom condition that likes will show only if there's a image link provided, makes sense right? I guess. */}
-        <div className="flex items-center pb-0 gap-5 ">
-          <ILike amount={likes} />
-          <IComment amount={comments} />
-        </div>
-        <Bookmark size={20} />
+      <div className="flex items-center w-full pt-5 justify-between text-neutral-300">
+        <PostInteraction likes={likes} comments={comments} />
+        <PostSave />
       </div>
-      <p className="pt-3 text-neutral-400">
-        <span className="font-bold text-neutral-200 mr-2">{data.userName}</span>
-        {data.content ? data.content : "Once upon a time..."}
-      </p>
+      <PostCaption
+        caption={data.caption}
+        userName={data.userName ? data.userName : "Astronaut"}
+      />
     </div>
   );
 }
