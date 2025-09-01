@@ -1,4 +1,5 @@
 import HomeTitle from "@/components/ui/home/title";
+import NextButton from "@/components/ui/nextBtn";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -11,13 +12,7 @@ export default function Main() {
         Space stuff all in one place with posts, videos, thoughts, and
         discoveries.
       </p>
-      <Link
-        className="p-4 border-1 border-neutral-800 rounded-full mt-4 hover:bg-neutral-800 flex items-center gap-2 md:bg-transparent bg-neutral-800"
-        href={"/discover"}
-        aria-label="EXPLORE"
-      >
-        <ArrowUpRight />
-      </Link>
+      <NextButton path={"/discover"} label="Explore" />
       <footer className="fixed bottom-5 text-neutral-400">
         <p>
           -/

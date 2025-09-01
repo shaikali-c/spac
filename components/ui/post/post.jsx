@@ -20,14 +20,14 @@ export default function Post({
 }) {
   return (
     <div
-      className={`p-5 w-full max-w-120 border-neutral-900 flex flex-col ${
+      className={`p-6 md:p-5 w-full max-w-120 border-neutral-900 flex flex-col ${
         !previewMode ? "md:border-x-2 border-b-2 " : "border-x-0"
       }`}
     >
       <header className="flex justify-between text-neutral-200">
         <div className="flex items-center gap-2">
           <CircleUserRound color="grey" size={20} />
-          <Link href={"/discover/tag"} className="flex items-center w-full">
+          <Link href={"/account/create"} className="flex items-center w-full">
             <span className="hover:underline font-medium">
               {data.userName ? data.userName : "Astronout"}
             </span>
