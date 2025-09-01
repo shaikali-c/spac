@@ -11,7 +11,7 @@ import SidebarElem from "./sidebar_elem";
 
 export default function Sidebar() {
   return (
-    <div className="h-dvh w-16 border-r-2 bg-black border-neutral-900 flex-col justify-between fixed top-0 left-0 hidden md:flex">
+    <div className="h-dvh w-16 border-r-2 bg-neutral-950 border-neutral-900 flex-col justify-between fixed top-0 left-0 hidden md:flex">
       <div>
         <div className="w-full h-16 flex justify-center items-center border-b-2 border-neutral-900">
           <Star size={20} fill="#fff" />

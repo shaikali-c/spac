@@ -8,7 +8,6 @@ export default function AccountLoginTab() {
         <AccountInput placeholder={"Email Address or Username"} />
         <AccountInput placeholder={"Password"} />
       </section>
-
       <FormSuccess />
       {/* <FormError errMsg={"Username already taken!"} /> */}
       {/* <div className="text-sm text-neutral-400 flex gap-1 md:items-center">
@@ -21,7 +20,7 @@ export default function AccountLoginTab() {
               </p>
             </div> */}
       <button className="w-full bg-sky-600 py-3 px-5 rounded-md hover:bg-sky-800 cursor-pointer">
-        Create
+        Login
       </button>
     </section>
   );

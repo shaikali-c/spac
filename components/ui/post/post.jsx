@@ -27,7 +27,7 @@ export default function Post({
       <header className="flex justify-between text-neutral-200">
         <div className="flex items-center gap-2">
           <CircleUserRound color="grey" size={20} />
-          <Link href={"/account/create"} className="flex items-center w-full">
+          <Link href={"/account/"} className="flex items-center w-full">
             <span className="hover:underline font-medium">
               {data.userName ? data.userName : "Astronout"}
             </span>
@@ -40,7 +40,7 @@ export default function Post({
         <Ellipsis size={20} />
       </header>
       {!previewMode ? (
-        <div className="relative w-full h-100 mb-5">
+        <div className="relative w-full h-90 md:h-110 mb-5">
           <Image
             src={
               data.imageLink
