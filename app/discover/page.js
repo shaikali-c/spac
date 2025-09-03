@@ -1,9 +1,4 @@
 import Post from "@/components/ui/post/post";
-import Thought from "@/components/ui/thoughts/thought";
-import { ArrowUpRight, Sparkles } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-
 const thoughts = [
   "The James Webb Space Telescope is an orbiting infrared observatory that will look to the beginning of time and to hunt for the unobserved formation of the first galaxies, as well as to look inside dust clouds where stars and planetary systems are forming today.",
   "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
