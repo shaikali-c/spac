@@ -59,13 +59,13 @@ export default function CreateInput({
       />
       {categoryFocus && (
         <div
-          className={`absolute top-full h-50 w-full z-10 bg-neutral-800 flex flex-col overflow-y-auto ${
+          className={`absolute top-full h-50 w-full z-10 bg-neutral-800 flex flex-col overflow-y-auto  rounded-b-2xl ${
             categoryFocus ? "border-t-2 border-sky-600" : ""
           } border-neutral-700`}
         >
           {spaceKeywords.map((elem, index) => (
             <span
-              className="border-b-2 bg-neutral-800 transition-all border-neutral-600 px-7 p-5 flex items-center gap-2.5 hover:bg-neutral-600 cursor-pointer"
+              className="border-b-0 bg-neutral-800 transition-all border-neutral-600 px-7 p-5 flex items-center gap-2.5 hover:bg-neutral-600 cursor-pointer"
               key={index}
               onMouseDown={() => handleCategorySelect(elem)}
             >

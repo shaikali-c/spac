@@ -1,6 +1,7 @@
 import Post from "@/components/ui/post/post";
 import Thought from "@/components/ui/thoughts/thought";
 import { ArrowUpRight, Sparkles } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const thoughts = [
@@ -71,31 +72,15 @@ const dummy_posts = [
 export default function Discover() {
   return (
     <main className="w-full">
-      <section className="flex justify-center flex-row gap-2">
+      <section className="flex justify-center flex-row gap-0">
         <div className="flex items-center justify-center flex-col">
           {dummy_posts.map((elem, id) => (
             <Post data={elem} key={id} />
           ))}
         </div>
-        <section className="hidden lg:block sticky top-0 h-screen max-w-140 border-r-2 border-neutral-900  overflow-y-auto">
-          <header className="p-5 pb-0 flex items-center gap-1.5">
-            <Sparkles size={20} className="text-sky-600" />
-            <h2 className="text-lg">Space thoughts</h2>
-          </header>
-
-          <section className="flex flex-col mt-5 gap-10 justify-center">
-            {thoughts.map((elem, index) => (
-              <Thought content={elem} key={index} />
-            ))}
-            <Link
-              aria-label="About thoughts page"
-              href={"/create"}
-              className="text-center text-neutral-50 flex gap-1 justify-center items-center bg-sky-600 w-fit mx-auto p-3 px-5 rounded-full hover:underline mb-10"
-            >
-              Post a thought
-              <ArrowUpRight size={18} />
-            </Link>
-          </section>
+        <section className="hidden lg:grid sticky top-0 h-screen max-w-140 border-r-2 border-neutral-900 overflow-y-auto min-w-120 grid-rows-2">
+          <div className="grid grid-cols-2 bg-neutral-950"></div>
+          <div className="grid grid-cols-2 bg-neutral-950"></div>
         </section>
       </section>
     </main>
