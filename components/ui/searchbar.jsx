@@ -23,7 +23,7 @@ export default function Searchbar() {
           className="h-16 border-b-2 border-neutral-900 w-full outline-0 px-6 bg-neutral-950"
         />
       </div>
-      <div className="w-full bg-neutral-950 h-14 border-b-2 border-neutral-900 flex justify-around text-sm max-w-screen overflow-x-auto md:hidden">
+      <div className="w-full bg-neutral-950 h-14 border-b-2 border-neutral-900 flex justify-around text-sm max-w-screen overflow-x-auto md:hidden scrollbar-hide">
         <Link
           href={"/discover"}
           className="h-full flex justify-center items-center w-fit gap-2 px-5  border-b-2 border-sky-600 text-neutral-100"
