@@ -21,13 +21,13 @@ export default function Post({
   return (
     <div
       className={`p-6 md:p-5 w-full max-w-120 border-neutral-900 flex flex-col ${
-        !previewMode ? "md:border-x-2 border-b-2 " : "border-x-0"
+        !previewMode ? "border-b-2 " : "border-x-0"
       }`}
     >
       <header className="flex justify-between text-neutral-200">
         <div className="flex items-center gap-2">
           <CircleUserRound color="grey" size={20} />
-          <Link href={"/account/"} className="flex items-center w-full">
+          <Link href={"/discover/tag"} className="flex items-center w-full">
             <span className="hover:underline font-medium">
               {data.userName ? data.userName : "Astronout"}
             </span>
@@ -64,16 +64,6 @@ export default function Post({
               className="rounded-2xl object-cover h-full w-full"
             />
           </div>
-          {/* <img
-            src={
-              !data.imageLink ? "/assets/placeholder_image.svg" : data.imageLink
-            }
-            onError={(e) => {
-              e.currentTarget.src = "/assets/placeholder_image.svg";
-            }}
-            alt="Post Image"
-            className="rounded-2xl mt-5 object-cover h-full w-full max-h-80"
-          /> */}
         </div>
       )}
       <div className="flex items-center w-full pt-5 justify-between text-neutral-300">

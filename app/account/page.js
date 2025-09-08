@@ -13,7 +13,7 @@ const tabs = [
     action: "Create",
   },
   {
-    heading: "Bon retour !",
+    heading: "Bon retour!",
     desc: "Log in to pick up right where you left off.",
     action: "Login",
   },

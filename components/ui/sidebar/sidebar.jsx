@@ -2,7 +2,6 @@ import {
   Aperture,
   House,
   Image,
-  MoonStar,
   Settings,
   Star,
   WandSparkles,

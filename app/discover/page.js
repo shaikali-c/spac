@@ -1,38 +1,4 @@
 import Post from "@/components/ui/post/post";
-const thoughts = [
-  "The James Webb Space Telescope is an orbiting infrared observatory that will look to the beginning of time and to hunt for the unobserved formation of the first galaxies, as well as to look inside dust clouds where stars and planetary systems are forming today.",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-  "Much closer to home, NASA has sent five robotic vehicles, called rovers, to Mars. Rovers help scientists in their quest to understand what different parts of the planet are made of. ",
-];
 
 const dummy_posts = [
   {
@@ -66,18 +32,10 @@ const dummy_posts = [
 
 export default function Discover() {
   return (
-    <main className="w-full">
-      <section className="flex justify-center flex-row gap-0">
-        <div className="flex items-center justify-center flex-col">
-          {dummy_posts.map((elem, id) => (
-            <Post data={elem} key={id} />
-          ))}
-        </div>
-        <section className="hidden lg:grid sticky top-0 h-screen max-w-140 border-r-2 border-neutral-900 overflow-y-auto min-w-120 grid-rows-2">
-          <div className="grid grid-cols-2 bg-neutral-950"></div>
-          <div className="grid grid-cols-2 bg-neutral-950"></div>
-        </section>
-      </section>
-    </main>
+    <div className="flex items-center justify-center flex-col">
+      {dummy_posts.map((elem, id) => (
+        <Post data={elem} key={id} />
+      ))}
+    </div>
   );
 }
