@@ -27,7 +27,7 @@ export default function Post({
       <header className="flex justify-between text-neutral-200">
         <div className="flex items-center gap-2">
           <CircleUserRound color="grey" size={20} />
-          <Link href={"/discover/tag"} className="flex items-center w-full">
+          <Link href={"/discover/user"} className="flex items-center w-full">
             <span className="hover:underline font-medium">
               {data.userName ? data.userName : "Astronout"}
             </span>

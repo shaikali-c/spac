@@ -12,11 +12,8 @@ export default function DiscoverLayout({ children }) {
           <div className="md:min-w-120 md:border-x-2 border-neutral-900">
             {children}
           </div>
-          <section className="hidden lg:flex flex-col sticky top-0 h-screen border-r-2 border-neutral-900 overflow-y-auto bg-neutral-950">
+          <section className="hidden w-120 lg:flex flex-col sticky top-0 h-screen  border-r-2 border-neutral-900 overflow-y-auto bg-neutral-950">
             <TopNav pcMode="true" />
-            <header>
-              <h2>Top rated researches</h2>
-            </header>
           </section>
         </section>
       </section>
