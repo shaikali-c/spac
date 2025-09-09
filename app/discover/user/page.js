@@ -1,8 +1,16 @@
+"use client";
 import Tag from "@/components/ui/user/tag";
 import { Atom, Blend, Camera, Gamepad, Sparkle, Sparkles } from "lucide-react";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function User() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  });
   return (
     <section className="md:w-120">
       <header className="flex justify-between items-center p-8 pb-5">
