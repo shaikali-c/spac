@@ -24,7 +24,7 @@ export default function Sidebar() {
         <SidebarElem path="/create">
           <WandSparkles size={20} />
         </SidebarElem>
-        <SidebarElem>
+        <SidebarElem path="/war">
           <Image size={20} />
         </SidebarElem>
       </div>
