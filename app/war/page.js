@@ -1,6 +1,6 @@
 import { Orbit } from "next/font/google";
 
-const orbit = Orbit({ weight: ["400"] });
+const orbit = Orbit({ weight: ["400"], subsets: ["latin"] });
 
 export default function War() {
   return (
