@@ -29,17 +29,12 @@ export default function User() {
         <p className="text-sm text-neutral-400">Joined a month ago.</p>
       </header>
 
-      <p className="p-5 pt-0 pb-8 px-8 text-neutral-400  border-b-2 border-neutral-900">
+      <p className="p-5 pt-0 pb-5 px-8 text-neutral-400 ">
         Nasir bin Olu Dara Jones known artistically as Nas is an American rapper
         and entrepreneur. Rooted in East Coast hip-hop, he is regarded as one of
         the best.
       </p>
-      <section className="p-8 border-b-2 border-neutral-900">
-        <header className="mb-5">
-          <h2 className="text-neutral-50 text-lg flex items-center gap-2.5">
-            <Sparkles size={18} /> Interested In
-          </h2>
-        </header>
+      <section className="p-8 pt-0 border-b-2 border-neutral-900">
         <section className="flex flex-wrap gap-4">
           <Tag text={"Photography"}>
             <Camera size={18} />
