@@ -2,6 +2,7 @@ import {
   Aperture,
   House,
   Image,
+  Pizza,
   Settings,
   Star,
   WandSparkles,
@@ -24,8 +25,8 @@ export default function Sidebar() {
         <SidebarElem path="/create">
           <WandSparkles size={20} />
         </SidebarElem>
-        <SidebarElem path="/war">
-          <Image size={20} />
+        <SidebarElem path="/marwaan">
+          <Pizza size={20} />
         </SidebarElem>
       </div>
       <SidebarElem style={"border-t-2 border-neutral-900"}>

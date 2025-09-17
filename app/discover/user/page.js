@@ -1,6 +1,14 @@
 "use client";
 import Tag from "@/components/ui/user/tag";
-import { Atom, Blend, Camera, Gamepad, Sparkle, Sparkles } from "lucide-react";
+import {
+  Atom,
+  Blend,
+  Camera,
+  Gamepad,
+  Plane,
+  Sparkle,
+  Sparkles,
+} from "lucide-react";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -30,9 +38,9 @@ export default function User() {
       </header>
 
       <p className="p-5 pt-0 pb-5 px-8 text-neutral-400 ">
-        Nasir bin Olu Dara Jones known artistically as Nas is an American rapper
-        and entrepreneur. Rooted in East Coast hip-hop, he is regarded as one of
-        the best.
+        Born in Wapakoneta, Ohio, Armstrong earned a degree in Aeronautical
+        Engineering from Purdue University. He served as a naval aviator before
+        joining NASA as a test pilot.
       </p>
       <section className="p-8 pt-0 border-b-2 border-neutral-900">
         <section className="flex flex-wrap gap-4">
@@ -44,6 +52,9 @@ export default function User() {
           </Tag>
           <Tag text={"Gaming"}>
             <Gamepad size={18} />
+          </Tag>
+          <Tag text={"Aeronotics Engineer"}>
+            <Plane size={18} />
           </Tag>
         </section>
       </section>

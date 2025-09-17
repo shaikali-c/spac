@@ -1,4 +1,11 @@
-import { Aperture, CircleStar, Clock, Dice3, TrendingUp } from "lucide-react";
+import {
+  Aperture,
+  CircleStar,
+  Clock,
+  Dice3,
+  Star,
+  TrendingUp,
+} from "lucide-react";
 import Link from "next/link";
 import TopNav from "./topNav";
 
@@ -7,7 +14,7 @@ export default function Searchbar() {
     <header className="sticky top-0 left-0 z-100 flex flex-col">
       <div className="flex h-16">
         <div className="w-18 h-full bg-neutral-950 border-r-2 border-neutral-900 border-b-2 flex items-center justify-center md:hidden">
-          <Aperture className="text-neutral-200" />
+          <Star className="text-neutral-200" size={22} fill="#e5e5e5" />
         </div>
         <input
           type="text"
